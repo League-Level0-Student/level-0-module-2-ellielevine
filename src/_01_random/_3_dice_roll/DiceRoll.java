@@ -14,6 +14,7 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
+
 public class DiceRoll {
 
 	private JFrame window = new JFrame("Roll the Dice!");
