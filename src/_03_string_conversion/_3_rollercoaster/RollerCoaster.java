@@ -1,25 +1,42 @@
-package _03_string_conversion._3_rollercoaster;
+package _03_string_conversion._2_strings_cannot_add;
 
 import javax.swing.JOptionPane;
 
-public class RollerCoaster {
+public class StringsCannotAdd {
 
-	// 1) Make a main method that includes all the steps below…. 
+		// 1) Make a main method that includes all the steps below…. 
+	public static void main(String[] args) {
 		
-		// 2) Ask the user to enter their height in inches using JOptionPane and set it to the variable heightToRide
-		
-		// Uncomment the line below...
-			//if( heightToRide > 42 ) { }
-		
-		// Do you see the heightToRide > 42 underlined red? That is because you are comparing a STRING to an INTEGER.
-		
-		// 3) Convert heightToRide to heightAsInt using Integer.parseInt();  Hint: int heightAsInt = Integer.parse... 
 	
-		// 4) If the heightAsInt is greater than or equal to 48 inches tall print:
-	    // "Hurray! You are tall enough to ride the coaster alone!" Hint: use JoptionPane
-		
-		// 5) Else if the heightAsInt is greater than or equal to 42 inches tall print:
-		// "You can ride the coaster with someone else!" 
-	
-		// 6) else print: "You must be at least 42 inches tall to ride the roller coaster pal!"
-} 
+			// 2) Ask the user to enter number 4 and hold it in the variable fourAsString 
+			String fourAsString = JOptionPane.showInputDialog("Enter number 4");
+			
+			// 3) Ask the user to enter number 6 and hold it in the variable sixAsString 
+			String sixAsString = JOptionPane.showInputDialog("Enter number 6");
+
+			// 4) Print the addition of fourAsString and sixAsString using JOptionPane 
+			JOptionPane.showMessageDialog(null, fourAsString + sixAsString);
+			// Did you notice 46 instead of 4 + 6 = 10?
+			
+			// 5) Ask the user to enter number 5 and hold it in the variable fiveAsString 
+			String fiveAsString = JOptionPane.showInputDialog("Enter number 5");
+			// 6) Print the addition of the variables fourAsString, sixAsString, and fiveAsString 
+			JOptionPane.showMessageDialog(null, fourAsString + sixAsString + fiveAsString);
+			//Did you notice 456 instead of 4 + 6 + 5 = 15?
+			
+			// Insert fourAsString inside the parenthesis of Integer.parseInt() and set the method equal to fourAsInt
+			// Hint: int fourAsInt = Integer.parseInt(fourAsString);
+			int fourAsInt = Integer.parseInt(fourAsString);
+			// 7) Do the same for sixAsString. 
+			int sixAsInt = Integer.parseInt(sixAsString);
+			// 8) Print the addition of fourAsInt and sixAsInt using JOptionPane 
+			JOptionPane.showMessageDialog(null, fourAsInt + sixAsInt);
+			// Did you notice the value 10? If so, hurray! You just changed the type of your variable from String to int.
+			
+			// 9) Convert fiveAsString to fiveAsInt using Integer.parseInt();  
+			int fiveAsInt = Integer.parseInt(fiveAsString);
+			// 10) Print the addition of fourAsInt, sixAsInt, and fiveAsInt using JOptionPane 
+			JOptionPane.showMessageDialog(null, fourAsInt + sixAsInt + fiveAsInt);
+			// Is your value now 15 instead of 465?
+}
+}
